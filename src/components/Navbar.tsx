@@ -12,7 +12,7 @@ function Navbar() {
                 <div>
                     <ul className="flex flex-row justify-between gap-5 items-center">
                         <li><Button className="text-white text-base" asChild>
-                            <Link to="/">Home</Link>
+                            <Link to="/">HOME</Link>
                         </Button></li>
                         <li><Button className="text-white text-base" asChild>
                             <Link to='/location'>LOCATION</Link></Button></li>
