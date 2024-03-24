@@ -34,6 +34,13 @@ a {
   background-color: rgba(255, 255, 255, 0.512);
 }
 
+.bg-meals {
+  background-image: url("./assets/mealspage.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;

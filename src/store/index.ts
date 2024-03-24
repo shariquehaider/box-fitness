@@ -3,14 +3,16 @@ import userLoginReducer from "./userLogin";
 import userRegistrationReducer from "./userRegistration";
 import userUpdateReducer from "./userUpdate";
 import userPasswordReducer from "./userPassword";
+import userDetailsReducer from "./userDetails";
 
 
 const store = configureStore({
     reducer: {
         userRegister: userRegistrationReducer,
-        userlogin: userLoginReducer,
+        userLogin: userLoginReducer,
         userUpdate: userUpdateReducer,
-        userPassword: userPasswordReducer
+        userPassword: userPasswordReducer,
+        userDeTails: userDetailsReducer
     }
 });
 

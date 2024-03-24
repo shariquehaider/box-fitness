@@ -9,17 +9,19 @@ export interface LoginUser {
     password: string
 }
 
-export interface UpdateUser {
-    email: string,
-    token: string,
-    age: number,
-    weight: number,
-    height: number
-}
 
 export interface UserPassword {
     email: string,
     token: string,
     oldPassword: string,
     newPassword: string
+}
+
+export interface UserDetails {
+    email: string
+    img: string,
+    name: string,
+    weight: number,
+    height: number,
+    age: number
 }

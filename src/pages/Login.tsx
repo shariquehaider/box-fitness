@@ -4,8 +4,11 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { userLoginDispatchAction } from "@/dispatcher/user";
 
 function Login() {
+    const dispatch: any = useDispatch();
     const [ user, setUser ] = useState({
         email: "",
         password: ""
@@ -23,7 +26,7 @@ function Login() {
 
     const handleSubmit = (event: any) => {
         event.preventDefault();
-        console.log(user);
+        dispatch(userLoginDispatchAction(user));
     }
 
     return (

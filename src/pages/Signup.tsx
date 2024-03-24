@@ -3,8 +3,13 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/componen
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { validate } from "@/lib/validator";
+import { useDispatch } from "react-redux";
+import { userRegisterDispatchAction } from "@/dispatcher/user";
+
 
 function Signup() {
+    const dispatch: any = useDispatch();
     const [ user, setUser ] = useState({
         name: "",
         email: "",
@@ -25,7 +30,11 @@ function Signup() {
 
     const handleSubmit = (event: any) => {
         event.preventDefault();
-        console.log(user);
+        const isValidEmail = validate(user.email, user.confirmEmail);
+        const isValidPassword = validate(user.password, user.confirmPassword);
+        if (isValidEmail && isValidPassword) {
+            dispatch(userRegisterDispatchAction(user));
+        }
     }
     return (
         <>

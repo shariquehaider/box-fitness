@@ -2,6 +2,7 @@ import FloatingDoc from "@/components/FloatingDoc";
 import BOYFIGHT from "../assets/Boyfight.jpg";
 import CROSSFIT from "../assets/mainpage.jpg";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
@@ -29,10 +30,12 @@ function Home() {
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, tempore sint maiores necessitatibus doloribus quam culpa sed eligendi veniam commodi et ipsa sit perferendis distinctio voluptatibus, aliquid harum nobis ad.</p>
           </div>
           <div className="flex gap-2 mx-4">
-            <Button variant="link" className="bg-red-500 text-white">PLANS</Button>
-            <Button variant="link" className="bg-red-500 text-white">MEALS</Button>
+            <Button variant="link" className="bg-red-500 text-white" asChild>
+              <Link to='/plans'>PLANS</Link></Button>
+            <Button variant="link" className="bg-red-500 text-white" asChild>
+              <Link to="/meals">MEALS</Link></Button>
             <Button variant="link" className="bg-red-500 text-white">LOCATIONS</Button>
-            <Button variant="link" className="bg-red-500 text-white">SIGN UP</Button>
+            <Button variant="link" className="bg-red-500 text-white" asChild><Link to='/signup'>SIGNUP</Link></Button>
           </div>
         </div>
        </div>

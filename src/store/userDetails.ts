@@ -6,26 +6,26 @@ const initialState = {
     user: null
 }
 
-const userLoginSlice = createSlice({
-    name: 'userLogin',
+const userDetailsSlice = createSlice({
+    name: 'userDetails',
     initialState,
     reducers: {
-        userLoginRequest(state){
+        userDetailsRequest(state){
             state.isLoading = true;
-            state.error = null;
             state.user = null;
+            state.error = null;
         },
-        userLoginSuccess(state, action){
+        userDetailsSuccess(state, action){
             state.isLoading = false;
             state.user = action.payload;
         },
-        userLoginFailed(state, action){
+        userDetailsFail(state, action) {
             state.isLoading = false;
             state.error = action.payload;
         }
     }
 });
 
-export const { userLoginRequest, userLoginSuccess, userLoginFailed } = userLoginSlice.actions;
+export const { userDetailsRequest, userDetailsSuccess, userDetailsFail } = userDetailsSlice.actions;
 
-export default userLoginSlice.reducer;
+export default userDetailsSlice.reducer;
